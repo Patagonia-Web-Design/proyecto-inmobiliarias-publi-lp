@@ -1,0 +1,196 @@
+---
+---
+
+<section id="problema" class="problem section">
+  <div class="container">
+    <h2 class="section-title text-center">
+      ¿Qué problema resolvemos?
+    </h2>
+    <div class="problem-hero text-center">
+      <p class="problem-stat">
+        El 80% de los desarrollos se frenan por tres razones:
+      </p>
+    </div>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🎨</div>
+        <h3>Diseños genéricos</h3>
+        <p>Diseños genéricos que no emocionan ni venden</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📋</div>
+        <h3>Documentación tardía</h3>
+        <p>Documentación que llega tarde o con errores</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📢</div>
+        <h3>Marketing inefectivo</h3>
+        <p>Marketing que no comunica el verdadero valor del proyecto</p>
+      </div>
+    </div>
+    <div class="problem-quote">
+      <blockquote>
+        "Un proyecto que no se vende, no se construye."
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Sección */
+  .problem {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  /* Título */
+  .section-title {
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Texto de estadística */
+  .problem-hero {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .problem-stat {
+    font-size: clamp(1.25rem, 3vw, 2.25rem);
+    font-weight: 600;
+    color: var(--color-text);
+    max-width: 800px;
+    margin-inline: auto;
+  }
+  
+  /* Grid de problemas */
+  .problems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Tarjetas de problemas */
+  .problem-card {
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: #FFFFFF;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-default);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .problem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(var(--color-primary-rgb, 0, 86, 224), 0.15);
+    border-color: var(--color-primary);
+  }
+  
+  .problem-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .problem-card h3 {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+  
+  .problem-card p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+  }
+  
+  /* Cita */
+  .problem-quote {
+    text-align: center;
+    padding: var(--space-xl) 0;
+  }
+  
+  blockquote {
+    font-size: clamp(1.5rem, 3.5vw, 2.75rem);
+    font-style: italic;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  
+  blockquote::before,
+  blockquote::after {
+    content: '"';
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.2;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    line-height: 0;
+  }
+  
+  blockquote::before {
+    top: 0.5rem;
+    left: -2rem;
+  }
+  
+  blockquote::after {
+    bottom: -1rem;
+    right: -2rem;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 576px) {
+    .problems-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    blockquote::before {
+      left: -1.5rem;
+    }
+    
+    blockquote::after {
+      right: -1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .problem-hero {
+      margin-bottom: var(--space-xxl);
+    }
+    
+    .problem-stat {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .problems-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xxl);
+    }
+    
+    blockquote {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+    }
+    
+    blockquote::before,
+    blockquote::after {
+      font-size: 5rem;
+    }
+    
+    blockquote::before {
+      left: -2.5rem;
+    }
+    
+    blockquote::after {
+      right: -2.5rem;
+    }
+  }
+</style>

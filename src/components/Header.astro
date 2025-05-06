@@ -1,0 +1,258 @@
+---
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        💎 PACK DEFINITIVO
+      </div>
+      <nav class="nav">
+        <a href="#problema">El Problema</a>
+        <a href="#solucion">La Solución</a>
+        <a href="#packs">Packs</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#demo" class="nav-cta">Solicitar Demo</a>
+      </nav>
+      <button class="mobile-menu" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#problema">El Problema</a>
+      <a href="#solucion">La Solución</a>
+      <a href="#packs">Packs</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#demo" class="nav-cta">Solicitar Demo</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Estructura base */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .header.scrolled {
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) 0;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 700;
+    background: linear-gradient(120deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Navegación desktop */
+  .nav {
+    display: none;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav a:hover {
+    color: var(--color-primary);
+  }
+  
+  .nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-cta {
+    padding: calc(var(--space-sm) * 0.75) var(--space-md);
+    background: var(--color-primary);
+    color: white !important;
+    border-radius: var(--radius-sm);
+  }
+  
+  .nav-cta:hover {
+    color: white !important;
+    transform: translateY(-2px);
+  }
+  
+  .nav-cta::after {
+    display: none !important;
+  }
+  
+  /* Menú móvil */
+  .mobile-menu {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--space-sm);
+  }
+  
+  .mobile-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-text);
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: var(--space-md) 0;
+    background: white;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .mobile-nav a {
+    padding: var(--space-md);
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .mobile-nav a:hover {
+    color: var(--color-primary);
+    background: rgba(0, 86, 224, 0.05);
+  }
+  
+  .mobile-nav .nav-cta {
+    margin: var(--space-md);
+    text-align: center;
+  }
+  
+  /* Clase para mostrar menú móvil */
+  .show-mobile-nav {
+    display: flex;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .header-content {
+      padding: var(--space-md) 0;
+    }
+    
+    .nav {
+      display: flex;
+    }
+    
+    .mobile-menu {
+      display: none;
+    }
+    
+    .mobile-nav {
+      display: none !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .nav {
+      gap: var(--space-xl);
+    }
+  }
+</style>
+
+<script>
+  // Toggle menú móvil
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    if (mobileMenuToggle && mobileNav) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('show-mobile-nav');
+        
+        // Animación del botón
+        const spans = mobileMenuToggle.querySelectorAll('span');
+        spans.forEach(span => {
+          span.classList.toggle('active');
+        });
+      });
+    }
+    
+    // Cerrar menú al hacer clic en un enlace
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('show-mobile-nav');
+        
+        // Restaurar botón
+        const spans = mobileMenuToggle.querySelectorAll('span');
+        spans.forEach(span => {
+          span.classList.remove('active');
+        });
+      });
+    });
+  });
+  
+  // Efecto de scroll
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 10) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+  
+  // Smooth scrolling para enlaces de anclaje
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const target = document.querySelector(targetId);
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,238 @@
+---
+---
+
+<section id="packs" class="packs section">
+  <div class="container">
+    <h2 class="section-title text-center">
+      ¿Qué incluye el PACK?
+    </h2>
+    <div class="packs-grid">
+      <div class="pack-card">
+        <div class="pack-icon">🔷</div>
+        <h3>DISEÑO ARQUITECTÓNICO ESTRATÉGICO</h3>
+        <div class="pack-subheader">by PROAARQ</div>
+        <div class="pack-tagline">Diseño que enamora y convierte.</div>
+        <ul class="pack-features">
+          <li>Layouts pensados para maximizar la venta</li>
+          <li>Tipologías adaptadas al mercado real</li>
+          <li>Diseño emocional con retorno garantizado</li>
+        </ul>
+      </div>
+      
+      <div class="pack-card">
+        <div class="pack-icon">🔷</div>
+        <h3>MODELADO & DOCUMENTACIÓN BIM</h3>
+        <div class="pack-subheader">by BIMARG</div>
+        <div class="pack-tagline">Coordinación, precisión y ejecución en tiempo récord.</div>
+        <ul class="pack-features">
+          <li>Modelo BIM en Revit</li>
+          <li>Documentación ejecutiva y municipal</li>
+          <li>Cómputo métrico y detección de interferencias</li>
+          <li>Flujo de trabajo bajo normas ISO</li>
+        </ul>
+      </div>
+      
+      <div class="pack-card">
+        <div class="pack-icon">🔷</div>
+        <h3>VISUALIZACIÓN & RENDERS</h3>
+        <div class="pack-subheader">by CO Render</div>
+        <div class="pack-tagline">Vendé antes de construir.</div>
+        <ul class="pack-features">
+          <li>Renders cinematográficos</li>
+          <li>Recorridos 360°</li>
+          <li>Brochures y contenido audiovisual</li>
+          <li>Presentaciones para ventas y aprobación</li>
+        </ul>
+      </div>
+      
+      <div class="pack-card">
+        <div class="pack-icon">🔷</div>
+        <h3>MARKETING DIGITAL & WEB</h3>
+        <div class="pack-subheader">by Patagonia Web Marketing</div>
+        <div class="pack-tagline">Tu proyecto necesita verse como lo que vale.</div>
+        <ul class="pack-features">
+          <li>Página web del proyecto</li>
+          <li>Campañas Google Ads + Meta Ads</li>
+          <li>Funnel digital para captar interesados</li>
+        </ul>
+      </div>
+      
+      <div class="pack-card">
+        <div class="pack-icon">🔷</div>
+        <h3>DISEÑO ESTRUCTURAL & CÁLCULO</h3>
+        <div class="pack-subheader">by Habitar Ingeniería</div>
+        <div class="pack-tagline">Estructura que acompaña el diseño y la velocidad del negocio.</div>
+        <ul class="pack-features">
+          <li>Cálculo estructural con software de última generación</li>
+          <li>Coordinación BIM</li>
+          <li>Planos listos para obra</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pack-summary">
+      <h3>Todo coordinado. Todo conectado. Todo resuelto.</h3>
+      <p>Una sola empresa. Cinco equipos sincronizados.<br>
+      Menos emails. Más resultados.<br>
+      Desde la idea hasta el render. Desde el plano hasta el posteo. Desde la web hasta la venta.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Sección */
+  .packs {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  /* Título */
+  .section-title {
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Grid de packs */
+  .packs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Tarjetas de pack */
+  .pack-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-default);
+    background: linear-gradient(to bottom right, #f8faff, #ffffff);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pack-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px -10px rgba(0, 86, 224, 0.15);
+    border-color: var(--color-primary);
+  }
+  
+  /* Icono de pack */
+  .pack-icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+  
+  /* Título del pack */
+  .pack-card h3 {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    margin-bottom: calc(var(--space-sm) / 2);
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+  }
+  
+  /* Subtítulo del pack */
+  .pack-subheader {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    font-size: 0.875rem;
+  }
+  
+  /* Tagline del pack */
+  .pack-tagline {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+    font-size: 1rem;
+  }
+  
+  /* Lista de características */
+  .pack-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .pack-features li {
+    padding: calc(var(--space-sm) / 2) 0;
+    color: var(--color-text);
+    position: relative;
+    padding-left: var(--space-lg);
+    font-size: 0.9375rem;
+  }
+  
+  .pack-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+  
+  /* Resumen del pack */
+  .pack-summary {
+    text-align: center;
+    padding: var(--space-xl);
+    background: linear-gradient(120deg, #f0f7ff, #e6f0ff);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-xl);
+  }
+  
+  .pack-summary h3 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+  
+  .pack-summary p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 576px) {
+    .packs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .section-title {
+      margin-bottom: var(--space-xxl);
+    }
+    
+    .pack-card {
+      padding: var(--space-xl);
+    }
+    
+    .pack-icon {
+      font-size: 2.5rem;
+    }
+    
+    .pack-features li {
+      font-size: 1rem;
+      padding: var(--space-sm) 0;
+    }
+    
+    .pack-summary {
+      padding: var(--space-xxl);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .packs-grid {
+      gap: var(--space-xl);
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .packs-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

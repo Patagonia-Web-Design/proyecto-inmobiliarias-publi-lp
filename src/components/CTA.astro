@@ -1,0 +1,121 @@
+---
+---
+
+<section id="demo" class="cta section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">
+        ¿Querés tener todo este pack funcionando para tu próximo desarrollo?
+      </h2>
+      <p class="cta-subtitle">Hablemos hoy.</p>
+      <a href="https://calendly.com/tu-calendario" class="cta-button cta-main">
+        👉 Solicitá una demo gratuita y conocé cómo lo integramos a tu proceso
+      </a>
+      <p class="cta-note">Sin compromiso. Sin costo. Solo 30 minutos para transformar tu próximo proyecto.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Sección */
+  .cta {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    padding: var(--space-xl) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Efecto de fondo */
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  
+  /* Contenido */
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Título */
+  .cta-title {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+  }
+  
+  /* Subtítulo */
+  .cta-subtitle {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+  }
+  
+  /* Botón principal */
+  .cta-main {
+    display: inline-block;
+    padding: var(--space-md) var(--space-lg);
+    background: white;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: var(--space-md);
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    width: 90%;
+  }
+  
+  @media (min-width: 768px) {
+    .cta-main {
+      width: auto;
+      white-space: nowrap;
+    }
+  }
+  
+  .cta-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Nota adicional */
+  .cta-note {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .cta {
+      padding: var(--space-xxl) 0;
+    }
+    
+    .cta-title {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .cta-subtitle {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .cta-main {
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-lg);
+    }
+  }
+</style>

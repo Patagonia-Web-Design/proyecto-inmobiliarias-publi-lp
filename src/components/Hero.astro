@@ -1,0 +1,189 @@
+---
+---
+
+<section class="hero section">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="gradient-text">Diseñá. Vendé. Escalá.</span><br>
+        Nosotros hacemos el resto.
+      </h1>
+      <p class="hero-subtitle">
+        Una solución 360° pensada para desarrolladoras que buscan velocidad, rentabilidad y diferenciación en cada proyecto.
+      </p>
+      <a href="#demo" class="cta-button hero-cta">
+        👉 Quiero este pack para mi próximo desarrollo
+      </a>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">80%</div>
+          <div class="stat-label">Proyectos más rápidos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">5x</div>
+          <div class="stat-label">Valor percibido</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Coordinado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estructura y fondo */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #F8FAFF 0%, #EEF2FF 100%);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(var(--color-primary-rgb, 0, 86, 224), 0.1);
+    padding-top: 100px; /* Espacio adicional para separarse del header */
+    width: 100%;
+  }
+  
+  /* Efectos de fondo */
+  .hero::before,
+  .hero::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .hero::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 90% 10%, 
+                               rgba(var(--color-primary-rgb, 0, 86, 224), 0.15) 0%, 
+                               transparent 60%);
+  }
+  
+  .hero::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: radial-gradient(circle at 10% 90%, 
+                               rgba(var(--color-secondary-rgb, 109, 40, 217), 0.1) 0%, 
+                               transparent 60%);
+  }
+  
+  /* Contenido */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  @media (max-width: 576px) {
+    .hero-content {
+      padding: var(--space-lg) var(--space-md);
+    }
+  }
+  
+  /* Título principal */
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  
+  /* Subtítulo */
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.375rem);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  
+  /* Botón CTA */
+  .hero-cta {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-md) var(--space-xl);
+    box-shadow: 0 4px 14px -1px rgba(var(--color-primary-rgb, 0, 86, 224), 0.25);
+  }
+  
+  /* Estadísticas */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  
+  .stat {
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-default);
+  }
+  
+  .stat:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .stat-label {
+    color: var(--color-text-light);
+    font-size: 1rem;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 576px) {
+    .hero-title {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .hero-cta {
+      margin-bottom: var(--space-l);
+    }
+    
+    .hero-stats {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: var(--space-xl);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: clamp(3.5rem, 7vw, 5.5rem);
+    }
+    
+    .stat {
+      padding: var(--space-xl);
+    }
+  }
+</style>

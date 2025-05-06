@@ -1,16 +1,26 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Problem from '../components/Problem.astro';
+import Solution from '../components/Solution.astro';
+import Packs from '../components/Packs.astro';
+import Results from '../components/Results.astro';
+import ForWho from '../components/ForWho.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Pack Definitivo para Desarrolladoras">
+  <Header />
+  <main>
+    <Hero />
+    <Problem />
+    <Solution />
+    <Packs />
+    <Results />
+    <ForWho />
+    <CTA />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,211 @@
+---
+---
+
+<section id="resultados" class="results section">
+  <div class="container">
+    <h2 class="section-title text-center">
+      ¿Cuánto ganás con este pack?
+    </h2>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-icon">🔺</div>
+        <h3>Aumento del valor percibido por m²</h3>
+        <p>Convertí cada metro en una inversión premium</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🔺</div>
+        <h3>Reducción del tiempo hasta la preventa</h3>
+        <p>De meses a semanas en el lanzamiento</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🔺</div>
+        <h3>Eficiencia operativa sin perder el control</h3>
+        <p>Un único punto de contacto para todo</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🔺</div>
+        <h3>Comunicación visual de alto impacto</h3>
+        <p>Clientes que compran antes de construir</p>
+      </div>
+    </div>
+    
+    <div class="investment-quote">
+      <blockquote>
+        Este pack no es un gasto. Es la inversión que convierte metros en millones.
+      </blockquote>
+    </div>
+    
+    <div class="deliverables">
+      <h3>Entregables del pack definitivo</h3>
+      <div class="deliverables-grid">
+        <div class="deliverable">✅ Diseño personalizado y planos</div>
+        <div class="deliverable">✅ Modelo BIM con cómputo</div>
+        <div class="deliverable">✅ Documentación ejecutiva y municipal</div>
+        <div class="deliverable">✅ Renders, recorridos y videos</div>
+        <div class="deliverable">✅ Página web del proyecto</div>
+        <div class="deliverable">✅ Publicidad online</div>
+        <div class="deliverable">✅ Documentación estructural</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Sección */
+  .results {
+    background: linear-gradient(120deg, #ffffff 0%, #f8faff 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  /* Título */
+  .section-title {
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Grid de resultados */
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Tarjetas de resultados */
+  .result-card {
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-default);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .result-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Icono de resultado */
+  .result-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+  }
+  
+  /* Título del resultado */
+  .result-card h3 {
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+  }
+  
+  /* Descripción del resultado */
+  .result-card p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+  }
+  
+  /* Bloque de cita */
+  .investment-quote {
+    text-align: center;
+    padding: var(--space-xl) 0;
+  }
+  
+  .investment-quote blockquote {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-style: italic;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    line-height: 1.3;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Sección de entregables */
+  .deliverables {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Título de entregables */
+  .deliverables h3 {
+    text-align: center;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    margin-bottom: var(--space-lg);
+    color: var(--color-text);
+  }
+  
+  /* Grid de entregables */
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  /* Item de entregable */
+  .deliverable {
+    padding: var(--space-md);
+    background: #f8faff;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-weight: 500;
+    color: var(--color-text);
+  }
+  
+  /* Media Queries */
+  @media (min-width: 576px) {
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .deliverables-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .section-title {
+      margin-bottom: var(--space-xxl);
+    }
+    
+    .results-grid {
+      margin-bottom: var(--space-xxl);
+    }
+    
+    .result-card {
+      padding: var(--space-xl);
+    }
+    
+    .deliverables {
+      padding: var(--space-xl);
+    }
+    
+    .investment-quote {
+      padding: var(--space-xxl) 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .results-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .deliverables-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .deliverables-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
