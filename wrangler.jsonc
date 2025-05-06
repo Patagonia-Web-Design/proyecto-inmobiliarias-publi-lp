@@ -1,0 +1,9 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "proyecto-inmo-lp",
+    // Update to today's date
+    "compatibility_date": "2025-05-5",
+    "assets": {
+      "directory": "./dist"
+    }
+  }

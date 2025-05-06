@@ -1,6 +1,0 @@
-name = "proyecto-inmo-lp" # Replace with your actual project name
-main = "./dist" # Astro generates this worker file
-compatibility_date = "2025-05-06"
-
-[site]
-bucket = "./dist" # Point to your Astro build output directory
